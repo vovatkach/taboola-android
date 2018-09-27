@@ -15,4 +15,9 @@
 # add if using MoPub mediation
 #-keep class com.taboola.android.mediation.MoPubCustomEventBanner** { *; }
 
+# add to avoid change private fields names in TaboolaApi class
+#-keepclassmembers class com.taboola.android.api.TaboolaApi {
+    private <fields>;    
+}
+
 ###---------- End: proguard configuration for Taboola widget  ----------
